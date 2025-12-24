@@ -1,59 +1,84 @@
-## Title of the Project
-Small description about the project like one below
-The integration of a chatbot within a hostel booking system, aimed at streamlining the reservation process for students and improving the overall user experience.
+# ScholarsDock
+A local-only, privacy-focused RAG (Retrieval-Augmented Generation) assistant that enables secure interaction with documents using Streamlit, Ollama, and FAISS.
 
 ## About
-<!--Detailed Description about the project-->
-Tailored Chatbot for Hostel Booking System is a project designed to integrate a chatbot that leverages advanced natural language processing techniques to understand and respond to user queries to the hostel booking system. Traditional hostel booking processes are often time-consuming and involve manual searches and extensive communication with hostel staff. This project seeks to overcome these challenges by creating an easy-to-use chatbot interface that assists students in addressing inquiries.
+ScholarsDock is designed to provide a secure and efficient way to query and interact with various document formats completely offline. By leveraging the power of local LLMs via Ollama and efficient vector search with FAISS, it ensures that your sensitive data never leaves your machine. Users can upload PDFs, DOCX, or TXT files and ask questions to get accurate, context-aware responses, making it an ideal tool for researchers, students, and professionals handling private documents.
 
 ## Features
-<!--List the features of the project as shown below-->
-- Implements advance neural network method.
-- A framework based application for deployment purpose.
-- High scalability.
-- Less time complexity.
-- A specific scope of Chatbot response model, using json data format.
+- **Local Execution**: Runs entirely on your local machine with no external API calls, ensuring maximum privacy.
+- **Document Support**: Seamlessly processes PDF, DOCX, and TXT files.
+- **Context-Aware Answers**: Uses RAG (Retrieval-Augmented Generation) to provide accurate answers based on document content.
+- **Source Citations**: Every response includes references to the specific source documents and text chunks.
+- **Strict Mode**: Toggleable option to force the AI to answer *only* based on the provided documents.
+- **Persistent Storage**: Vector embeddings are saved locally, so you don't have to re-process documents every time.
 
 ## Requirements
-<!--List the requirements of the project as shown below-->
-* Operating System: Requires a 64-bit OS (Windows 10 or Ubuntu) for compatibility with deep learning frameworks.
-* Development Environment: Python 3.6 or later is necessary for coding the sign language detection system.
-* Deep Learning Frameworks: TensorFlow for model training, MediaPipe for hand gesture recognition.
-* Image Processing Libraries: OpenCV is essential for efficient image processing and real-time hand gesture recognition.
-* Version Control: Implementation of Git for collaborative development and effective code management.
-* IDE: Use of VSCode as the Integrated Development Environment for coding, debugging, and version control integration.
-* Additional Dependencies: Includes scikit-learn, TensorFlow (versions 2.4.1), TensorFlow GPU, OpenCV, and Mediapipe for deep learning tasks.
+To run this project, you need the following:
+
+- **Python 3.10+** installed on your system.  
+- **Ollama**: You must have [Ollama](https://ollama.com/) installed and running.  
+- **LLM Model**: Pull the required model using the command: `ollama pull qwen2.5`  
+- **Python Dependencies**:  
+    - `streamlit`
+    - `ollama`
+    - `faiss-cpu`
+    - `sentence-transformers`
+    - `langchain-text-splitters`
+    - `pypdf`
+    - `python-docx`
 
 ## System Architecture
-<!--Embed the system architecture diagram as shown below-->
-
-![Screenshot 2023-11-25 133637](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/a60c11f3-0a11-47fb-ac89-755d5f45c995)
-
+<img width="806" height="220" alt="image" src="https://github.com/user-attachments/assets/f9e95a1e-0c48-406d-9459-531fed053ff8" />
 
 ## Output
-
 <!--Embed the Output picture at respective places as shown below as shown below-->
-#### Output1 - Name of the output
 
-![Screenshot 2023-11-25 134037](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/8c2b6b5c-5ed2-4ec4-b18e-5b6625402c16)
+### Output 1 - Home Page
+<img width="1163" height="749" alt="image" src="https://github.com/user-attachments/assets/8ff31be4-748f-45fb-8f30-29a2f84739e0" />
 
-#### Output2 - Name of the output
-![Screenshot 2023-11-25 134253](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/5e05c981-05ca-4aaa-aea2-d918dcf25cb7)
+### Output 2 - Document only Answer
+<img width="1658" height="676" alt="image" src="https://github.com/user-attachments/assets/47a2c542-4e7e-43df-89a8-e92bb447a96b" />
 
-Detection Accuracy: 96.7%
-Note: These metrics can be customized based on your actual performance evaluations.
+### Output 3 - Idea generation + Document Analysis
+<img width="1268" height="575" alt="image" src="https://github.com/user-attachments/assets/224cb787-8149-4465-a03d-cc0fd3f6edf9" />
 
+## Results
+### Performance Results  
+**Accuracy**  
+- Responses were highly relevant to the uploaded documents.
+- Hallucinations were minimized due to RAG architecture.
 
-## Results and Impact
-<!--Give the results and impact as shown below-->
-The Sign Language Detection System enhances accessibility for individuals with hearing and speech impairments, providing a valuable tool for inclusive communication. The project's integration of computer vision and deep learning showcases its potential for intuitive and interactive human-computer interaction.
+**Efficiency**  
+- Fast similarity search using FAISS.
+- Low latency response generation on local machines.
 
-This project serves as a foundation for future developments in assistive technologies and contributes to creating a more inclusive and accessible digital environment.
+**Scalability**  
+- Successfully handled multiple documents.
+- Performance scaled with available hardware resources.
 
-## Articles published / References
-1. N. S. Gupta, S. K. Rout, S. Barik, R. R. Kalangi, and B. Swampa, “Enhancing Heart Disease Prediction Accuracy Through Hybrid Machine Learning Methods ”, EAI Endorsed Trans IoT, vol. 10, Mar. 2024.
-2. A. A. BIN ZAINUDDIN, “Enhancing IoT Security: A Synergy of Machine Learning, Artificial Intelligence, and Blockchain”, Data Science Insights, vol. 2, no. 1, Feb. 2024.
+**Privacy**  
+- All data remained on the local system.
+- No external data transmission.
 
+## References
+[1]     K. Suryavanshi, N. Thikekar, R. Pawar and S. Ashtekar, "Implementation of RAG Based Question-Answering Application," 2025 International Conference on Data Science and Business Systems (ICDSBS), Chennai, India, 2025. 
 
+[2]       V. Kamra, L. Gupta, D. Arora and A. K. Yadav, "Enhancing Document Retrieval Using AI and Graph-Based RAG Techniques," 2024 5th International Conference on Communication, Computing & Industry 6.0 (C2I6), Bengaluru, India, 2024.
 
+[3]       S. Vakayil, D. S. Juliet, A. J and S. Vakayil, "RAG-Based LLM Chatbot Using Llama-2," 2024 7th International Conference on Devices, Circuits and Systems (ICDCS), Coimbatore, India, 2024. 
 
+[4]	P. Joshi, A. Gupta, P. Kumar and M. Sisodia, "Robust Multi Model RAG Pipeline For Documents Containing Text, Table & Images," 2024 3rd International Conference on Applied Artificial Intelligence and Computing (ICAAIC), Salem, India, 2024.
+
+[5]	B. Saha, U. Saha and M. Zubair Malik, "QuIM-RAG: Advancing Retrieval-Augmented Generation With Inverted Question Matching for Enhanced QA Performance," in IEEE Access, vol. 12.
+
+[6]	K. Sawarkar, A. Mangal and S. R. Solanki, "Blended RAG: Improving RAG (Retriever-Augmented Generation) Accuracy with Semantic Search and Hybrid Query-Based Retrievers," 2024 IEEE 7th International Conference on Multimedia Information Processing and Retrieval (MIPR), San Jose, CA, USA.
+
+[7]	Tufino, Eugenio. “NotebookLM: An LLM with RAG for active learning and collaborative tutoring.” 
+
+[8]	R. Patil, A. Nikam, T. Lichade, R. Patel, D. Maheshwari and A. Rajguru, "Intelligent PDF Query System for Document Analysis," 2025 International Conference on Cognitive Computing in Engineering, Communications, Sciences and Biomedical Health Informatics (IC3ECSBHI), Greater Noida, India, 2025.
+
+[9]	V. Perov and V. Golovkov, "Ethics Documents in the Field of AI. Concepts, Achievements and Problems," 2024 IEEE Ural-Siberian Conference on Biomedical Engineering, Radioelectronics and Information Technology (USBEREIT), Yekaterinburg, Russian Federation, 2024
+
+[10]	R. K, P. Gupta, G. Suthar, K. S. Sidhu, R. Sarkar and P. Satyanarayana, "Natural Language Processing for AI-Powered Legal Document Analysis," 2025 International Conference on Computing Technologies & Data Communication (ICCTDC), HASSAN, India, 2025
+
+[11]	A. Ramprasad and P. Sivakumar, "Context-Aware Summarization for PDF Documents using Large Language Models," 2024 International Conference on Expert Clouds and Applications (ICOECA), Bengaluru, India, 2024
